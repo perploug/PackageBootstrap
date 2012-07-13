@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F8699F7A-1FCA-4C9D-B1BD-6FA3FA82A25A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PackageBootstrap</RootNamespace>
+    <AssemblyName>PackageBootstrap</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\3rd party dlls\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="businesslogic">
+      <HintPath>..\3rd party dlls\umbraco\businesslogic.dll</HintPath>
+    </Reference>
+    <Reference Include="cms">
+      <HintPath>..\3rd party dlls\umbraco\cms.dll</HintPath>
+    </Reference>
+    <Reference Include="controls">
+      <HintPath>..\3rd party dlls\umbraco\controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Examine">
+      <HintPath>..\3rd party dlls\umbraco\Examine.dll</HintPath>
+    </Reference>
+    <Reference Include="interfaces">
+      <HintPath>..\3rd party dlls\umbraco\interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Entity.Design" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="umbraco">
+      <HintPath>..\3rd party dlls\umbraco\umbraco.dll</HintPath>
+    </Reference>
+    <Reference Include="umbraco.DataLayer">
+      <HintPath>..\3rd party dlls\umbraco\umbraco.DataLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="umbraco.editorControls">
+      <HintPath>..\3rd party dlls\umbraco\umbraco.editorControls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Attributes\Setting.cs" />
+    <Compile Include="Attributes\SettingPrevalues.cs" />
+    <Compile Include="FieldSettingType.cs" />
+    <Compile Include="Configuration\ProviderBaseConfiguration.cs" />
+    <Compile Include="Eventargs\TaskEventArgs.cs" />
+    <Compile Include="Eventargs\TaskmanagerEventARgs.cs" />
+    <Compile Include="Exceptions\ProviderException.cs" />
+    <Compile Include="GlobalExtensions\GlobalExtensions.cs" />
+    <Compile Include="GlobalExtensions\StringExtensions.cs" />
+    <Compile Include="Interfaces\ISettingType.cs" />
+    <Compile Include="Interfaces\ITask.cs" />
+    <Compile Include="IOHElper.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="ObjectCloner.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProviderModel\IProviderBase.cs" />
+    <Compile Include="ProviderModel\ProviderBase.cs" />
+    <Compile Include="ProviderModel\ProviderCollection.cs" />
+    <Compile Include="ProviderModel\ProviderTypeBase.cs" />
+    <Compile Include="ProviderModel\RegisteredProviderTypes.cs" />
+    <Compile Include="UI\Controls\ContentPickerWithXpathOption.cs" />
+    <Compile Include="UI\Controls\DatePicker.cs" />
+    <Compile Include="UI\Controls\Fileupload.cs" />
+    <Compile Include="UI\Controls\HiddenField.cs" />
+    <Compile Include="UI\Controls\ValidatableCheckboxList.cs" />
+    <Compile Include="UI\Controls\ValidateableCheckbox.cs" />
+    <Compile Include="UI\Controls\Validation\ValidationFieldExtender.cs" />
+    <Compile Include="UI\Controls\Validation\ValidationFieldExtenderDesigner.cs" />
+    <Compile Include="UI\Controls\Validation\Validators.cs" />
+    <Compile Include="UI\SettingTypes\Checkbox.cs" />
+    <Compile Include="UI\SettingTypes\DropdownList.cs" />
+    <Compile Include="UI\SettingTypes\File.cs" />
+    <Compile Include="UI\SettingTypes\Password.cs" />
+    <Compile Include="UI\SettingTypes\Pickers\BasePicker.cs" />
+    <Compile Include="UI\SettingTypes\Pickers\Content.cs" />
+    <Compile Include="UI\SettingTypes\Pickers\ContentWithXpath.cs" />
+    <Compile Include="UI\SettingTypes\Pickers\DataType.cs" />
+    <Compile Include="UI\SettingTypes\Pickers\DocumentType.cs" />
+    <Compile Include="UI\SettingTypes\Pickers\MediaType.cs" />
+    <Compile Include="UI\SettingTypes\Pickers\MemberGroup.cs" />
+    <Compile Include="UI\SettingTypes\Pickers\MemberType.cs" />
+    <Compile Include="UI\SettingTypes\TextArea.cs" />
+    <Compile Include="UI\SettingTypes\TextBox.cs" />
+    <Compile Include="Singleton.cs" />
+    <Compile Include="Storage\Mapping\GenericMapper.cs" />
+    <Compile Include="Storage\Mapping\GenericMapperCollection.cs" />
+    <Compile Include="Storage\Mapping\PocoTypeMapper.cs" />
+    <Compile Include="Storage\PetaPoco.cs" />
+    <Compile Include="Storage\ProviderStorage.cs" />
+    <Compile Include="Storage\StorageBase.cs" />
+    <Compile Include="Tasks\TaskBase.cs" />
+    <Compile Include="Tasks\TaskManagerBase.cs" />
+    <Compile Include="Typefinder.cs" />
+    <Compile Include="Typeresolver.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="UI\Controls\Validation\ValidationFieldExtenderBehavior.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
